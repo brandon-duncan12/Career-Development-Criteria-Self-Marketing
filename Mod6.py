@@ -1,6 +1,6 @@
 # Brandon M. Duncan
-# ITS410: Database Management
-# Prof. Kristie Gregar-Skillman
+# MIS480: Capstone - Business Analytics and Information Systems
+# Dr. Kimberly Ford
 
 # Imports the Connector
 import mysql.connector
