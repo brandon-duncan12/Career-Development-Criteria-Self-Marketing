@@ -1,0 +1,99 @@
+ /* Brandon Duncan
+    MIS480: Capstone - Business Analytics & Information Systems
+    Dr. Kimberly Ford
+*/
+
+ods graphics / reset width=10in height=4.8in imagemap;
+
+proc sort data=WORK.IMPORT out=_BarChartTaskData;
+	by Gender;
+run;
+
+proc sgplot data=_BarChartTaskData;
+	Where Attrition_Flag in ("Attrited Customer");
+	by Gender;
+	vbar Age / group=Attrition_Flag groupdisplay=cluster;
+	yaxis grid;
+run;
+
+ods graphics / reset;
+
+proc datasets library=WORK noprint;
+	delete _BarChartTaskData;
+	run;
+	
+ods graphics / reset width=10in height=4.8in imagemap;
+
+proc sort data=WORK.IMPORT out=_BarChartTaskData;
+	by Gender;
+run;
+
+proc sgplot data=_BarChartTaskData;
+	Where Attrition_Flag in ("Attrited Customer");
+	by Gender;
+	vbar Education_Level / group=Attrition_Flag groupdisplay=cluster;
+	yaxis grid;
+run;
+
+ods graphics / reset;
+
+proc datasets library=WORK noprint;
+	delete _BarChartTaskData;
+	run;
+	
+ods graphics / reset width=10in height=4.8in imagemap;
+
+proc sort data=WORK.IMPORT out=_BarChartTaskData;
+	by Gender;
+run;
+
+proc sgplot data=_BarChartTaskData;
+	Where Attrition_Flag in ("Attrited Customer");
+	by Gender;
+	vbar Marital_Status / group=Attrition_Flag groupdisplay=cluster;
+	yaxis grid;
+run;
+
+ods graphics / reset;
+
+proc datasets library=WORK noprint;
+	delete _BarChartTaskData;
+	run;
+	
+ods graphics / reset width=10in height=4.8in imagemap;
+
+proc sort data=WORK.IMPORT out=_BarChartTaskData;
+	by Gender;
+run;
+
+proc sgplot data=_BarChartTaskData;
+	Where Attrition_Flag in ("Attrited Customer");
+	by Gender;
+	vbar Income_Category/ group=Attrition_Flag groupdisplay=cluster;
+	yaxis grid;
+run;
+
+ods graphics / reset;
+
+proc datasets library=WORK noprint;
+	delete _BarChartTaskData;
+	run;
+	
+ods graphics / reset width=10in height=4.8in imagemap;
+
+proc sort data=WORK.IMPORT out=_BarChartTaskData;
+	by Gender;
+run;
+
+proc sgplot data=_BarChartTaskData;
+	Where Attrition_Flag in ("Attrited Customer");
+	by Gender;
+	vbar Card_Category / group=Attrition_Flag groupdisplay=cluster;
+	yaxis grid;
+run;
+
+ods graphics / reset;
+
+proc datasets library=WORK noprint;
+	delete _BarChartTaskData;
+	run;
